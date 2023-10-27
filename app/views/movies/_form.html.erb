@@ -1,0 +1,40 @@
+<%= form_with(model: movie, local: true) do |form| %>
+    <div class="mb-4">
+      <%= form.label :Movie_name, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :name, class: "form-input mt-1 block w-full" %>
+    </div>
+  
+    <div class="mb-4">
+      <%= form.label :Description, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :description, class: "form-input mt-1 block w-full" %>
+    </div>
+  
+    <div class="mb-4">
+      <%= form.label :Genre, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :genre, class: "form-input mt-1 block w-full" %>
+    </div>
+
+     <div class="mb-4">
+      <%= form.label :Language, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :language, class: "form-input mt-1 block w-full" %>
+    </div>
+
+     <div class="mb-4">
+      <%= form.label :Director, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.text_field :director_name, class: "form-input mt-1 block w-full" %>
+    </div>
+
+     <div class="mb-4">
+      <%= form.label :Release_Date, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.date_field :release, class: "form-input mt-1 block w-full" %>
+    </div>
+
+     <div class="mb-4">
+      <%= form.label :Run_Time, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= form.number_field :run_time, class: "form-input mt-1 block w-full" %>
+    </div>
+  
+    <div class="flex items-center justify-between">
+      <%= form.submit "Submit", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+    </div>
+  <% end %>
