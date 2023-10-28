@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
 
   def create 
     @movie = Movie.new(movie_params)
+    @movie.image.attach(params[:movie][:image])
     
     if @movie.save
       redirect_to @movie
@@ -38,6 +39,6 @@ class MoviesController < ApplicationController
   private
   
   def movie_params
-    params.require(:movie).permit(:name, :description, :genre, :director_name, :language, :release, :run_time, :status)
+    params.require(:movie).permit(:name, :description, :genre, :director_name, :language, :release, :run_time, :status, :image)
   end
 end

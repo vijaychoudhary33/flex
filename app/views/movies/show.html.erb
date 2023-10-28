@@ -1,6 +1,12 @@
-  <h1 class="heading mb-2"><%= @movie.name %></h1>
-  <p class="text-lg mb-2"><%= @movie.description %></p>
-  <p class="text-sm"><strong>Genre:</strong> <%= @movie.genre %></p>
-  <p class="text-sm"><strong>Release:</strong> <%= @movie.release%></p>
-  <p class="text-sm"><strong>Director:</strong> <%= @movie.director_name %></p>
+<div style="position: relative;">
+  <%= image_tag @movie.image, class: "w-64 h-64 mx-auto mb-4" %>
+  <h1 class="heading mb-2" style="position: absolute; top: 0; right: 5; padding: 5px;">
+    <%= @movie.name %>
+  </h1>
+</div>
+
+<p class="text-lg mb-2"><%= @movie.description %></p>
+<p class="text-sm"><strong>Genre:</strong> <%= @movie.genre %></p>
+<p class="text-sm"><strong>Release:</strong> <%= @movie.release%></p>
+<p class="text-sm"><strong>Director:</strong> <%= @movie.director_name %></p>
  

@@ -33,6 +33,15 @@
       <%= form.label :Run_Time, class: "block text-gray-700 text-sm font-bold mb-2" %>
       <%= form.number_field :run_time, class: "form-input mt-1 block w-full" %>
     </div>
+
+    <div class = "form-group">
+      <% if @movie.image.attached?%>
+        <%= image_tag @movie.image, style: "width: 200px; display: block" %>
+      <% end %>
+        <%= form.label :image %>
+        <%= form.file_field :image, class: "form-control"%>
+      
+    </div>
   
     <div class="flex items-center justify-between">
       <%= form.submit "Submit", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
