@@ -6,4 +6,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "movies#index"
+  namespace :admin do
+    resources :movies
+    resources :user
+    root to: "movies#index"
+  end
 end
