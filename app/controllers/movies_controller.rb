@@ -1,5 +1,12 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "You are not authorized to access this page."
+    redirect_to root_path
+  end
+
   def index
     @movies = Movie.all
   end
