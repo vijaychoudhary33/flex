@@ -10,7 +10,7 @@ class Ability
     when 'admin'
       can :manage, :all
     when 'user'
-      can :read, Movie
+      can :manage, :all
     else
       can :read, Movie
     end
