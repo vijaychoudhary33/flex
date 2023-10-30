@@ -1,0 +1,13 @@
+<%# <h1>Welcomeindex</h1>
+<%= link_to "Log in", new_user_session_path %>
+ <%# <%= link_to "Sign up", new_user_registration_path %> 
+ <%# <div style="position: absolute;">  
+  <%= image_tag image_path('bg_home.jpg'), class: "image" %>
+
+<div style="position: relative;">
+  <%= image_tag image_path('bg_home.jpg'), style: "width: 100%; height: 97vh;" %>
+  <h1 class="heading mb-2" style="position: absolute; top: 0; right: 5; padding: 25px; color: white;">
+    <%= "FLEX" %>
+  </h1>
+  <%= link_to "Sign in", new_user_session_path, style: "position: absolute; top: 8%; right: 25px; transform: translateY(-50%); background-color: red; color: white; padding: 10px 20px; text-decoration: none;" %> 
+</div>

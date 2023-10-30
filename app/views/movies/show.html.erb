@@ -1,5 +1,5 @@
 <div style="position: relative;">
-  <%= image_tag @movie.image, class: "w-64 h-64 mx-auto mb-4" %>
+  <%= image_tag @movie.image_url, class: "w-64 h-64 mx-auto mb-4" %>
   <h1 class="heading mb-2" style="position: absolute; top: 0; right: 5; padding: 5px;">
     <%= @movie.name %>
   </h1>
@@ -10,3 +10,4 @@
 <p class="text-sm"><strong>Release:</strong> <%= @movie.release%></p>
 <p class="text-sm"><strong>Director:</strong> <%= @movie.director_name %></p>
  
+  <li><%= link_to "Edit", edit_movie_path(@movie), class: "text-blue-500" %></li>
